@@ -1,0 +1,24 @@
+RMI is a mechanism to access the object running in one machine to another
+machine.
+
+it has 2object namely stub,skeleton
+
+arch diag
+
+                      client                                            server
+                         |                                                      |
+                      stub                                              skeleton
+                         |                                                      |
+                       RRL   <---virtual connection--->   RRL
+                        |                                                       |
+               transport                                             transport   
+                 layer        <----byte_stream------>        layer
+
+steps to run the program.
+ 
+first compile all the code
+then start typing this
+rmic addimp
+start rmiregistry 2222
+java addserver
+java addclient //this to be in new cmd prompt
